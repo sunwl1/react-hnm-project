@@ -2,6 +2,8 @@ const path = require('path')
 const webpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const webpackMode = process.env.NODE_ENV || 'development';
+import WebSocketClient from "webpack-dev-server/client/clients/WebSocketClient";
+WebSocketClient.url = path.join(__dirname, '/');
 module.exports = {
  
     name: 'react-project',
