@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "env": "webpack server --env development",
     "build": "webpack",
-    "start": "webpack-dev-server --http"
+    "start": "webpack-dev-server"
   },
   "keywords": [],
   "author": "",
