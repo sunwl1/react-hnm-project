@@ -21,7 +21,6 @@ const Login = ({ setAuthenticate }) => {
     try{
         // axios.get 은 두번째 매개변수로 config 전달
         const res = await axios.post('/api/add')
-        login();
     } catch(e) {
         console.error(e.message)
     }
