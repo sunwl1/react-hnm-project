@@ -15,25 +15,15 @@ function App () {
     const [inputData, setInputData] = useState(null);
     // await 를 사용하기 위해 async선언
     async function check() {
-        try{
-            const res = await axios.get('/api/');
-            setInputData(res.data.user);
-        } catch(e){
-            console.error(e.message)
-        }
+      const res = await axios.get('/api/');
+      setInputData(res.data.user);
     }
     useEffect(() => {
         check();
     },[])
 
     const add = async() => {
-        // delete 버튼 를릭 시 실행
-        try{
-            // axios.get 은 두번째 매개변수로 config 전달
-            const res = await axios.post('/api/add')
-        } catch(e) {
-            console.error(e.message)
-        }
+        const res = await axios.post('/api/add')
     }
     return (
       <>
