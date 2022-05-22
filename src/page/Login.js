@@ -10,6 +10,7 @@ const Login = ({ setAuthenticate }) => {
         // setAuthenticate(true);
         // navigate("/");
         console.log(res)
+        console.log(location.origin);
     } catch(e){
         console.error(e.message)
     }
@@ -19,10 +20,10 @@ const Login = ({ setAuthenticate }) => {
     // delete 버튼 를릭 시 실행
     try{
         // axios.get 은 두번째 매개변수로 config 전달
-        const res = await axios.post('https://hnm-express-project.herokuapp.com/api/add')
+        const res = await axios.post('/api/add')
         login();
-    } catch(event) {
-        console.error(event.message)
+    } catch(e) {
+        console.error(e.message)
     }
   }
   return (
