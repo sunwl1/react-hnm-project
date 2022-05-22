@@ -1,4 +1,5 @@
 const path = require('path')  
+const webpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
  
 module.exports = {
@@ -32,6 +33,9 @@ module.exports = {
                     }],  
                     '@babel/preset-react'  
                 ],
+                plugins: [
+                    'react-refresh/babel'
+                ]
             }
         },
         {
@@ -48,6 +52,7 @@ module.exports = {
     },
  
     plugins: [
+        new webpackPlugin(),
         new MiniCssExtractPlugin({ filename: 'style.css' }) 
     ],
  
