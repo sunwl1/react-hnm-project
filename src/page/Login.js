@@ -11,8 +11,8 @@ const Login = ({ setAuthenticate }) => {
         // setAuthenticate(true);
         // navigate("/");
         console.log(res)
-    } catch(e){
-        console.error(e.message)
+    } catch(event){
+        console.error(event.message)
     }
   }
   const add = async(event) => {
