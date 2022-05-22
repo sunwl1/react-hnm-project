@@ -76,6 +76,7 @@ module.exports = {
         port: 8080,
         hot: true,
         historyApiFallback: true,
+        allowedHosts: ['all']
     },
  
 }
