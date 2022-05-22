@@ -76,7 +76,9 @@ module.exports = {
         port: 8080,
         hot: true,
         historyApiFallback: true,
-        overlay: true
+        disableHostCheck: true,
+        transportMode: 'ws',
+        injectClient: false
     },
  
 }
