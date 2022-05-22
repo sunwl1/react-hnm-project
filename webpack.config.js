@@ -79,7 +79,6 @@ module.exports = {
         inline: true,
         quiet: false,
         noInfo: true,
-        stats: { colors: true }
     },
  
 }
