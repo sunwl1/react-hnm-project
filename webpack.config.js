@@ -1,12 +1,12 @@
 const path = require('path')  
 const webpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
- 
+const webpackMode = process.env.NODE_ENV || 'development';
 module.exports = {
  
     name: 'react-project',
     
-    mode: 'development',
+    mode: webpackMode,
  
     resolve: {
         extensions: ['.js', '.jsx']
