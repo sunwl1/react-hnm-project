@@ -4,8 +4,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 const Login = ({ setAuthenticate }) => {
   const navigate = useNavigate();
-  async function login(event) {
-    event.preventDefault();
+  async function login() {
     try{
         const res = await axios.get('/api/');
         // setAuthenticate(true);
@@ -21,6 +20,7 @@ const Login = ({ setAuthenticate }) => {
     try{
         // axios.get 은 두번째 매개변수로 config 전달
         const res = await axios.post('https://hnm-express-project.herokuapp.com/api/add')
+        login();
     } catch(event) {
         console.error(event.message)
     }
