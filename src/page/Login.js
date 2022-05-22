@@ -15,7 +15,8 @@ const Login = ({ setAuthenticate }) => {
         console.error(e.message)
     }
   }
-  const add = async() => {
+  const add = async(event) => {
+    event.preventDefault();
     // delete 버튼 를릭 시 실행
     try{
         // axios.get 은 두번째 매개변수로 config 전달
