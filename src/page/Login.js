@@ -4,17 +4,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 const Login = ({ setAuthenticate }) => {
   const navigate = useNavigate();
-  async function login(event) {
-    event.preventDefault();
-    try{
-        const res = await axios.get('/api/');
-        // setAuthenticate(true);
-        // navigate("/");
-        console.log(res)
-    } catch(e){
-        console.error(e.message)
-    }
-  }
+
   const add = async() => {
     // delete 버튼 를릭 시 실행
     try{
