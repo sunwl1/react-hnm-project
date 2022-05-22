@@ -15,9 +15,19 @@ const Login = ({ setAuthenticate }) => {
         console.error(e.message)
     }
   }
+  const add = async() => {
+    // delete 버튼 를릭 시 실행
+    try{
+        // axios.get 은 두번째 매개변수로 config 전달
+        const res = await axios.post('/api/add')
+        check();
+    } catch(e) {
+        console.error(e.message)
+    }
+  }
   return (
     <Container className="login-area">
-      <Form className="login-form" onSubmit={login}>
+      <Form className="login-form" onSubmit={add}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control type="email" placeholder="Enter email" />
