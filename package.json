@@ -45,7 +45,6 @@
       "react-app/jest"
     ]
   },
-  "proxy" : "https://hnm-express-project.herokuapp.com",
   "browserslist": {
     "production": [
       ">0.2%",
