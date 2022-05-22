@@ -1,33 +1,16 @@
 import React from "react";
 import { Container, Form, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
 const Login = ({ setAuthenticate }) => {
   const navigate = useNavigate();
-  async function login() {
-    try{
-        const res = await axios.get('/api/');
-        // setAuthenticate(true);
-        // navigate("/");
-        console.log(res)
-        console.log(location.origin);
-    } catch(e){
-        console.error(e.message)
-    }
-  }
-  const add = async(event) => {
+  const login = (event) => {
     event.preventDefault();
-    // delete 버튼 를릭 시 실행
-    try{
-        // axios.get 은 두번째 매개변수로 config 전달
-        const res = await axios.post('/api/add')
-    } catch(e) {
-        console.error(e.message)
-    }
-  }
+    setAuthenticate(true);
+    navigate("/");
+  };
   return (
     <Container className="login-area">
-      <Form className="login-form" onSubmit={add}>
+      <Form className="login-form" onSubmit={login}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control type="email" placeholder="Enter email" />
