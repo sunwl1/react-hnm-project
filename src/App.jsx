@@ -15,15 +15,15 @@ function App () {
     const [inputData, setInputData] = useState(null);
     // await 를 사용하기 위해 async선언
     async function check() {
-      const res = await axios.get('/api/');
-      setInputData(res.data.user);
+      // const res = await axios.get('/api/');
+      // setInputData(res.data.user);
     }
     useEffect(() => {
         check();
     },[])
 
     const add = async() => {
-        const res = await axios.post('/api/add')
+        // const res = await axios.post('/api/add')
     }
     return (
       <>
