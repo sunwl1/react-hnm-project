@@ -4,13 +4,22 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 const Login = ({ setAuthenticate }) => {
   const navigate = useNavigate();
-
+  async function login(event) {
+    event.preventDefault();
+    try{
+        const res = await axios.get('/api/');
+        // setAuthenticate(true);
+        // navigate("/");
+        console.log(res)
+    } catch(e){
+        console.error(e.message)
+    }
+  }
   const add = async() => {
     // delete 버튼 를릭 시 실행
     try{
         // axios.get 은 두번째 매개변수로 config 전달
         const res = await axios.post('/api/add')
-        check();
     } catch(e) {
         console.error(e.message)
     }
