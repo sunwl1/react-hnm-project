@@ -74,11 +74,9 @@ module.exports = {
         },
         compress: true,
         port: 8080,
-        overlay: true,
-        hot: true,    
-        inline: true,
-        quiet: false,
-        noInfo: true,
+        hot: true,
+        historyApiFallback: true,
+        overlay: true
     },
  
 }
