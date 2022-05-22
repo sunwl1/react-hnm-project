@@ -66,11 +66,13 @@ module.exports = {
         proxy: {
             '/api': {
             target: 'https://hnm-express-project.herokuapp.com/',
+            changeOrigin: true,
             }
         },
         static: {
             directory: path.join(__dirname, 'public')
         },
+        overlay: true,
         compress: true,
         port: 8080,
         hot: true,
