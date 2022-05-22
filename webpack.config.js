@@ -13,7 +13,7 @@ module.exports = {
     },
     
     entry: {
-        app: ['./src/index.jsx']
+        app: ['/src/index.jsx']
     },
  
     module: {
