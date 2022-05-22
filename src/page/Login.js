@@ -3,11 +3,17 @@ import { Container, Form, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 const Login = ({ setAuthenticate }) => {
   const navigate = useNavigate();
-  const login = (event) => {
+  async function login(event) {
     event.preventDefault();
-    setAuthenticate(true);
-    navigate("/");
-  };
+    try{
+        const res = await axios.get('/api/');
+        // setAuthenticate(true);
+        // navigate("/");
+        console.log(res)
+    } catch(e){
+        console.error(e.message)
+    }
+  }
   return (
     <Container className="login-area">
       <Form className="login-form" onSubmit={login}>
