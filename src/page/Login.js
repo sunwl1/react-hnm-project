@@ -2,6 +2,13 @@ import React from "react";
 import { Container, Form, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 const Login = ({ setAuthenticate }) => {
+  const add = async() => {
+    try{
+        const res = await axios.post('/api/add')
+    } catch(e) {
+        console.error(e.message)
+    }
+  }
   const navigate = useNavigate();
   const login = (event) => {
     event.preventDefault();
@@ -10,7 +17,7 @@ const Login = ({ setAuthenticate }) => {
   };
   return (
     <Container className="login-area">
-      <Form className="login-form" onSubmit={login}>
+      <Form className="login-form" onSubmit={add}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control type="email" placeholder="Enter email" />
