@@ -65,7 +65,7 @@ module.exports = {
     devServer: {
         proxy: {
             '/api': {
-            target: 'https://hnm-express-project.herokuapp.com/',
+            target: 'http://54.180.79.114/5000/',
             changeOrigin: true,
             }
         },
